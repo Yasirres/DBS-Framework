@@ -1,0 +1,33 @@
+Licensing scope
+
+The MIT License below applies only to newly authored files in scripts/ and tests/,
+and to .github/workflows/ci.yml and .gitignore.
+
+The original DBS framework skill is credited to AI Foundations. No license to
+AI Foundations' material is granted by this file. The adapted SKILL.md,
+documentation, and templates are not offered under MIT. The maintainer reports
+permission to publish this adaptation with source credit and a website link;
+that permission does not specify MIT relicensing or broader downstream rights.
+See ATTRIBUTION.md. This is not a blanket MIT license for the whole repository.
+
+MIT License (new tooling only)
+
+Copyright (c) 2026 DBS Framework contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
