@@ -108,9 +108,7 @@ it to check packages with platform-specific metadata.
 
 ## Publish and contribute
 
-See the [Arabic GitHub publishing guide](docs/PUBLISHING.ar.md) for public repository
-creation, upload, topics, and the `v1.0.0` release. See
-[CONTRIBUTING.md](CONTRIBUTING.md) for contribution and compatibility checks.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and compatibility checks.
 
 Published release: [**v1.0.0**](https://github.com/Yasirres/DBS-Framework/releases/tag/v1.0.0),
 released on 2026-09-13. Changes after that release are recorded under Unreleased

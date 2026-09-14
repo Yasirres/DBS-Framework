@@ -16,7 +16,7 @@ MARKER = re.compile(r'\bTODO\b|\bFIXME\b|\{\{[^{}]+\}\}')
 LINK = re.compile(r'(?<!!)\[[^\]\n]*\]\(([^\s)]+)\)')
 REQUIRED = ['SKILL.md', 'README.md', 'CONTRIBUTING.md', 'LICENSE', '.gitignore',
             'ATTRIBUTION.md', 'CHANGELOG.md', '.github/workflows/ci.yml',
-            'docs/PUBLISHING.ar.md', 'docs/VALIDATION.md', 'tests/test_tools.py',
+            'docs/VALIDATION.md', 'tests/test_tools.py',
             'references/dbs-principles.md', 'references/testing-guide.md',
             'scripts/validate_skill.py', 'scripts/scaffold_skill.py']
 REQUIRED += [f'references/platforms/{p}.md' for p in ('claude', 'chatgpt', 'codex')]
