@@ -48,7 +48,7 @@ class ToolTests(unittest.TestCase):
         # Independent inventory: this must catch omissions from REQUIRED itself.
         expected = '''SKILL.md README.md CONTRIBUTING.md LICENSE .gitignore
 ATTRIBUTION.md CHANGELOG.md .github/workflows/ci.yml
-docs/PUBLISHING.ar.md docs/VALIDATION.md tests/test_tools.py
+docs/VALIDATION.md tests/test_tools.py
 references/dbs-principles.md references/testing-guide.md
 references/platforms/claude.md references/platforms/chatgpt.md references/platforms/codex.md
 scripts/validate_skill.py scripts/scaffold_skill.py
