@@ -44,6 +44,40 @@ class ToolTests(unittest.TestCase):
     def test_repository_valid(self):
         self.assertEqual(validate(ROOT, repository=True), ([], []))
 
+    def test_repository_rejects_each_missing_file(self):
+        # Independent inventory: this must catch omissions from REQUIRED itself.
+        expected = '''SKILL.md README.md CONTRIBUTING.md LICENSE .gitignore
+ATTRIBUTION.md CHANGELOG.md .github/workflows/ci.yml
+docs/PUBLISHING.ar.md docs/VALIDATION.md tests/test_tools.py
+references/dbs-principles.md references/testing-guide.md
+references/platforms/claude.md references/platforms/chatgpt.md references/platforms/codex.md
+scripts/validate_skill.py scripts/scaffold_skill.py
+templates/generic-skill-template.md templates/claude-skill-template.md
+templates/chatgpt-skill-template.md templates/codex-skill-template.md'''.split()
+        root = self.base / 'repository'
+        for relative in expected:
+            target = root / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ROOT / relative, target)
+        self.assertEqual(validate(root, repository=True), ([], []))
+        for relative in expected:
+            with self.subTest(missing=relative):
+                target = root / relative
+                original = target.read_bytes()
+                target.unlink()
+                try:
+                    errors, _ = validate(root, repository=True)
+                    message = ('missing exact-case SKILL.md file' if relative == 'SKILL.md'
+                               else f'missing required file: {relative}')
+                    self.assertIn(message, errors)
+                finally:
+                    target.write_bytes(original)
+
+    def test_standalone_skill_does_not_require_repository_files(self):
+        root = self.minimal()
+        self.assertEqual(validate(root), ([], []))
+        self.assertTrue(validate(root, repository=True)[0])
+
     def test_all_platforms_are_self_contained_drafts(self):
         for platform in ('generic', 'claude', 'chatgpt', 'codex'):
             with self.subTest(platform=platform):
