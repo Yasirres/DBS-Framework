@@ -76,7 +76,7 @@ dbs-framework/
 │   └── codex-skill-template.md
 ├── scripts/{validate_skill,scaffold_skill}.py
 ├── tests/test_tools.py
-└── docs/{PUBLISHING.ar,VALIDATION}.md
+└── docs/VALIDATION.md
 ```
 
 ## Generate a starter
