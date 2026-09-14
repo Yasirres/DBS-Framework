@@ -112,7 +112,9 @@ See the [Arabic GitHub publishing guide](docs/PUBLISHING.ar.md) for public repos
 creation, upload, topics, and the `v1.0.0` release. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and compatibility checks.
 
-Prepared version: **1.0.0**, not yet published. Adapted from AI Foundations' DBS
+Published release: [**v1.0.0**](https://github.com/Yasirres/DBS-Framework/releases/tag/v1.0.0),
+released on 2026-09-13. Changes after that release are recorded under Unreleased
+in [CHANGELOG.md](CHANGELOG.md). Adapted from AI Foundations' DBS
 skill architecture guide supplied by the user. The original Direction / Blueprints /
 Solutions model and progressive disclosure are preserved; shared instructions are
 now platform-neutral.
