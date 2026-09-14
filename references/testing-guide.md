@@ -1,8 +1,9 @@
 # Testing guide
 
 Run from the repository root with Python 3.10 or newer; scripts use only the standard
-library. The release was tested locally with Python 3.13. CI covers 3.10 and 3.13
-on Linux and Windows once GitHub Actions runs; do not claim those runs in advance.
+library. The v1.0.0 release passed local tests with Python 3.13 and GitHub Actions
+with Python 3.10 and 3.13 on Linux and Windows. See the pinned evidence in
+[validation status](../docs/VALIDATION.md). Each later change needs its own CI result.
 
 If a restricted Windows host cannot access Python's private temporary directories,
 set `DBS_TEST_DIR` to an existing, writable workspace directory outside this package.
@@ -21,6 +22,11 @@ python -m unittest discover -s tests -v
 The validator checks the DBS frontmatter profile, entrypoint size, required
 repository files, explicit Markdown file links, Python syntax, and unresolved
 starter markers. Exit 0 means pass, 1 means invalid, and 2 means CLI usage error.
+With `--repository`, all 22 baseline files are required, including attribution,
+changelog, documentation, tests, and CI. Extra files are allowed. The regression
+suite removes each baseline file in turn and checks that validation rejects it.
+Without this flag, standalone skills do not need the repository's public documents
+or CI/test files.
 It does not execute target scripts, contact remote links, resolve Markdown anchors,
 validate all Markdown dialects, audit dependencies, or prove behavior.
 
